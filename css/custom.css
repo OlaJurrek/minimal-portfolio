@@ -173,6 +173,85 @@ nav {
 	font-size: 1.1em;
 }
 
+/* Latest projects section */
+
+#latest-projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+	grid-gap: 10px;
+	margin-top: 100px;
+}
+
+.project-box {
+	display: grid;
+	grid-template-columns: 1;
+	grid-template-rows: 1;
+	overflow: hidden;
+}
+
+.project-box:first-child {
+	grid-column: 1 / 3;
+	overflow: visible;
+}
+
+.project-box .section-header {
+	padding-bottom: 40px;
+}
+
+.slide-in {
+	opacity: 0;
+	transition: 
+		transform 1s,
+		opacity 1.2s;
+}
+
+.from-down {
+	transform: translateY(200px);
+}
+
+.from-up {
+	transform: translateY(-200px);
+}
+
+.slide-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.project-box > img {
+	width: 100%;
+	object-fit: cover;
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+}
+
+.overlay {
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	background-color: rgba(28, 70, 163, 0.3);
+	transition: all 400ms;
+	transform: translateY(100%);
+}
+
+.project-box:hover .overlay {
+	transform: translateY(0%);
+}
+
+.overlay button {
+	padding: 8px 13px;
+	border-style: none;
+	border: 2px solid darkgray;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-transform: uppercase;
+	font-family: Lato, sans-serif;
+	letter-spacing: 0.15em;
+	color: white;
+}
+
 /* About Section */
 
 .description {
@@ -322,6 +401,7 @@ input, textarea {
   background: inherit;
   color: #fff;
   font-family: Helvetica;
+	font-size: 14px;
   letter-spacing: 0.1em;
 }
 
@@ -395,6 +475,10 @@ footer {
 /* Contact details and form */
 
 @media (max-width:700px) {
+/*	Latest Projects Header */
+		.project-box:first-child {
+		grid-column: 1 / 2;
+	}
 	
 	#contact {
 		display: grid;

@@ -1,5 +1,4 @@
-
-
+/* Menu animation */
 var hamburger = document.getElementById('hamburger');
 var menu = document.getElementById('menu');
 
@@ -12,6 +11,8 @@ hamburger.onclick = function() {
 		hamburger.className = hamburger.className.replace('showMenu', '');
 	}
 };
+
+
 
 // Firtst slideshow
 //var i = 0;
@@ -56,4 +57,34 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     numbers[slideIndex-1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+/* On-scroll animations */
+
+    function debounce(func, wait = 20, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    }
+
+const slideInItems = document.querySelectorAll('.slide-in');
+
+window.addEventListener('scroll', debounce(checkSlide));
+
+function checkSlide(e) {
+	slideInItems.forEach(slideInItem => {
+		const slideInAt = (window.scrollY + window.innerHeight) - slideInItem.offsetHeight / 2;
+		if (slideInAt > slideInItem.offsetTop) {
+			slideInItem.classList.add('visible');
+		}
+	});
 }
