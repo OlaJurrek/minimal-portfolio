@@ -115,14 +115,23 @@ nav {
 
 /* Hamburger menu */
 #hamburger {
+	
 	grid-column: 1 / 2;
 	grid-row: 1 / 2;
 	justify-self: end;
-  width: 25px;
+  width: 35px;
   height: 25px;
-	padding: 2px;
+	padding: 2px 10px;
 	margin: 5px;
+	z-index: 23;
+	background-color: #fff;
 }
+
+/*
+#hamburger > div {
+	margin: 0 15px;
+}
+*/
 
 .line {
 	display: block;
@@ -171,6 +180,30 @@ nav {
 .caption.active {
 	font-weight: 700;
 	font-size: 1.1em;
+}
+/* Experiments on cross-fading background images */
+
+.cross-fade {
+	display: grid;
+	grid-template-columns: 1;
+}
+
+.cross-fade > * {
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+}
+
+.cross-fade > div {
+  display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+.cross-fade > div button {
+	background-color: #fff;
+	height: 160px;
+	width: 160px;
+	border-radius: 50%;
 }
 
 /* Latest projects section */
@@ -460,14 +493,14 @@ footer {
 @media (max-width:1024px) {
 	
 	.feature-boxes {
-	display: flex;
-	flex-direction: column;
-  align-items: center;
-	margin-bottom: 20px;
+	 	display: flex;
+	  	flex-direction: column;
+      	align-items: center;
+	  	margin-bottom: 20px;
   }
 	
 	.feature-box {
-		max-width: 350px;
+	  	max-width: 350px;
 		margin: 15px 0;
 	}
 } 
