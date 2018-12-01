@@ -1,8 +1,8 @@
 /* Menu animation */
-var hamburger = document.getElementById("hamburger");
-var menu = document.getElementById("menu");
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
 
-hamburger.onclick = function() {
+hamburger.addEventListener("click", () => {
   if (menu.className == "hide") {
     menu.className = menu.className.replace("hide", "show");
     hamburger.className += "showMenu";
@@ -10,7 +10,7 @@ hamburger.onclick = function() {
     menu.className = menu.className.replace("show", "hide");
     hamburger.className = hamburger.className.replace("showMenu", "");
   }
-};
+});
 
 // Firtst slideshow
 //var i = 0;

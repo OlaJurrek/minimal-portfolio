@@ -4,7 +4,7 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .quotation-slide {
@@ -31,16 +31,27 @@
 .quotation-slide div:nth-child(1) {
   left: -100%;
 }
-.quotation-slide div:nth-child(3) {
+.quotation-slide div:nth-child(2) {
   left: 100%;
 }
-
-.quotation-slide div:nth-child(4) {
+.quotation-slide div:nth-child(3) {
   left: 200%;
 }
 
-.quotation-slide div:nth-child(5) {
+.quotation-slide div:nth-child(4) {
   left: 300%;
+}
+
+.quotation-slide div:nth-child(5) {
+  left: 400%;
+}
+
+.quotation-slide div:nth-child(6) {
+  left: 500%;
+}
+
+.quotation-slide div:nth-child(7) {
+  left: 600%;
 }
 
 .quotation-slide span {

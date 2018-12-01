@@ -1,26 +1,38 @@
 //Quotation slideshow
 
 const quotationSlide = document.querySelector(".quotation-slide");
-// const quotationFrame = document.querySelector(".quotation-frame");
 const quotationDivs = document.querySelectorAll(".quotation-slide div");
 
 let counter = 1;
-// const size = quotationFrame.clientWidth;
-const size = quotationSlide.clientWidth;
+const size = quotationDivs[0].clientWidth;
+
+// quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
 
 setInterval(quotationSlider, 2000);
 
 function quotationSlider() {
-  if (counter < quotationDivs.length - 2) {
+  if (counter <= quotationDivs.length) {
     quotationSlide.style.transition = "transform .7s ease-in-out";
-    counter++;
     quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
-  } else {
+    counter++;
+  }
+
+  // else {
+  //   quotationSlide.style.transition = "none";
+  //   counter = 0;
+  //   quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
+  //   counter++;
+  // }
+}
+
+quotationSlide.addEventListener("transitionend", () => {
+  if (quotationDivs[counter].id === "firstClone") {
+    // quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
     quotationSlide.style.transition = "none";
-    counter = 0;
+    counter = 1;
     quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
   }
-}
+});
 
 // quotationSlider.addEventListener("transitionend", () => {
 //   if (carouselImages[counter].id === "lastClone") {
