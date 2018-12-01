@@ -2,8 +2,22 @@
 
 /* Basic Styles */
 
+@import url(portfolio.css);
+@import url(animation.css);
+@import url(quotation.css);
+@import url(team.css);
+/* @import url(media-query.css); */
+
 * {
   box-sizing: border-box;
+}
+
+/* Global variables */
+
+:root {
+  --gutter-sm: 60px;
+  --gutter-lg: 90px;
+  --primary-color: #3a3a3a;
 }
 
 a {
@@ -22,7 +36,28 @@ h2 {
 
 h3 {
   font: normal 24px/0.8em Dosis, sans-serif;
-  color: #3a3a3a;
+  color: var(--primary-color);
+}
+
+/* Buttons */
+
+.btn {
+  display: block;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  padding: 19px 0;
+  width: 100%;
+  max-width: 280px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font: 400 1rem/1.1875rem Lato, sans-serif;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 p {
@@ -43,7 +78,7 @@ img {
 .main-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 50px 15px 0;
+  padding: var(--gutter-sm) 15px 0;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -53,7 +88,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: var(--gutter-sm);
 }
 
 .media-icons a {
@@ -181,23 +216,31 @@ nav {
 }
 /* Experiments on cross-fading background images */
 
-.cross-fade {
+.crossfade-box {
   display: grid;
   grid-template-columns: 1;
 }
 
-.cross-fade > * {
+.crossfade-box > * {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
 
-.cross-fade > div {
+.crossfade-box img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.crossfade-box img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.crossfade-box > div {
   display: grid;
   justify-items: center;
   align-items: center;
 }
 
-.cross-fade > div button {
+.crossfade-box > div button {
   background-color: #fff;
   height: 160px;
   width: 160px;
@@ -206,11 +249,11 @@ nav {
 
 /* Latest projects section */
 
-#latest-projects {
+.projects-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   grid-gap: 10px;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .project-box {
@@ -220,7 +263,7 @@ nav {
   overflow: hidden;
 }
 
-.project-box:first-child {
+.project-box.gallery-intro {
   grid-column: 1 / 3;
   overflow: visible;
 }
@@ -292,12 +335,14 @@ nav {
   margin-bottom: 40px;
 }
 
+/* Quatation */
+
 /* Feature Boxes */
 
 .feature-boxes {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin: var(--gutter-sm) 0;
 }
 
 .feature-box {
@@ -344,6 +389,21 @@ nav {
   color: #6c6c6c;
 }
 
+/*  Initial  */
+
+/*  Bottom Box */
+
+.bottom-box {
+  padding: 40px 60px;
+  background-image: url(../images/gray_sand.png);
+}
+
+.bottom-box p,
+.bottom-box h1,
+.bottom-box h2 {
+  color: #e3e3e3;
+}
+
 /* Contact details and form */
 
 #contact {
@@ -351,15 +411,13 @@ nav {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
-  padding: 40px 60px;
-  background-image: url(../images/gray_sand.png);
 }
 
-#contact p,
+/* #contact p,
 #contact h1,
 #contact h2 {
   color: #e3e3e3;
-}
+} */
 
 .section-header {
   display: grid;
@@ -394,7 +452,7 @@ nav {
 
 .contact-details {
   margin-top: 30px;
-  color: #e3e3e3;
+  /* color: #e3e3e3; */
 }
 
 .contact-details p {
@@ -467,34 +525,7 @@ input {
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0 30px;
-}
-
-/* Fading animation for slideshow */
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.4s;
-  animation-name: fade;
-  animation-duration: 1.4s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.8;
-  }
-  to {
-    opacity: 1;
-  }
+  padding: var(--gutter-sm) 0 30px;
 }
 
 /* Smaller screens */
@@ -513,7 +544,20 @@ footer {
   }
 }
 
-/* Contact details and form */
+/* Our Team */
+
+@media (max-width: 800px) {
+  .our-team {
+    grid-template-areas:
+      "description"
+      "image"
+      "contact";
+    justify-items: center;
+  }
+  .member-contact {
+    grid-template-columns: minmax(auto, 580px) 60px;
+  }
+}
 
 @media (max-width: 700px) {
   /* Menu  */
@@ -552,6 +596,10 @@ footer {
     padding-top: 15vh;
   }
 
+  #menu.show a:last-child {
+    margin: 35px auto 0;
+  }
+
   #hamburger.showMenu {
     position: fixed;
     top: 25px;
@@ -559,11 +607,15 @@ footer {
   }
 
   /*	Latest Projects Header */
+
   .project-box:first-child {
     grid-column: 1 / 2;
   }
 
+  /* Contact details and form */
+
   #contact {
+    background-color: red;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 2fr;

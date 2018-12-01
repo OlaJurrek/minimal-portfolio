@@ -1,0 +1,18 @@
+stan pocz¹tkowy
+
+pierwszy w kolejnoœci obraz jest wyœwietlony po otworzeniu strony (ma klasê visible {display: block;}, 
+pozosta³e s¹ niewidzialne {display: none;}
+odpowiedaj¹ca mu, pierwsza w kolejnoœci miniatura tez ma klase current i opacity: 1
+
+I sytuacja: u¿ytkownik klika praw¹ po³owê strony i w efekcie wyœwietla mu siê nastêpny w kolejnoœci obraz
+pelne opacity ma nastepna w kolejnosci mianiatura
+poprzedni obraz znika {display:none;} a jego miniatura traci opacity przez utrate klasy current
+
+musi byæ w jakiœ sposób oznaczone, ¿e to polowa tej aktywnej strony - klasa visible musi byæ dodana do g³ównego pojemnika ze zdjêciem i divami z kursami strza³kami
+
+to zdarzenie (onclick) musi byæ dodana do diva o klasie visible
+
+const slides = document.getElementByClassName("slide");
+let currentSlide = 0;
+
+
