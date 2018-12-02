@@ -555,6 +555,10 @@ footer {
 @media (max-width: 700px) {
   /* Menu  */
 
+  :root {
+    --gutter-sm: 25px;
+  }
+
   #menu {
     transition: none;
   }
@@ -606,7 +610,6 @@ footer {
   }
 
   /* Contact details and form */
-
   #contact {
     background-color: red;
     display: grid;
@@ -626,5 +629,29 @@ footer {
   form {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+  }
+
+  /* Portfolio */
+
+  .portfolio-intro {
+    flex-direction: column;
+  }
+
+  .portfolio-intro div {
+    margin-bottom: var(--gutter-sm);
+  }
+
+  /* Portfolio Gallery */
+  #current {
+    display: none;
+  }
+
+  .thumbnails {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact button */
+  .portfolio-btn {
+    margin-top: var(--gutter-sm);
   }
 }
