@@ -1,1 +1,7 @@
-/* This  project really taught me why maintenance is as important as creation of the project. After a while I regretted that I hadn't tried Sass from the beginning and even though I knew it wasn't the best solution I divided the large css file into smaller parts and imported them into the main file. */
+/* This  project really taught me why maintenance is as important as creation of the project. After a while I regretted that I hadn't tried Sass from the beginning and even though I knew it wasn't the best solution I divided the large css file into smaller parts and imported them into the main file. 
+
+1. The quotation slider still requires some amendments:
+a) there is a useless empty div at the beginnig, which is always hidden.
+b) after the page is loaded, the slider starts in a strange place - in div with id 'firstClone'.
+c) 6th interval is twice longer that it should be.
+d) clientWidth property doesn't change after the wundow is resized. You have to reload the page to read a new value of it.*/

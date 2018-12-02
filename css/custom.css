@@ -113,7 +113,6 @@ nav {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   transition: all 0.7s;
-  z-index: -1;
 }
 
 #menu.hide {
@@ -158,6 +157,7 @@ nav {
   height: 25px;
   padding: 2px 15px 2px 5px;
   background-color: #fff;
+  z-index: 23;
 }
 
 .line {
