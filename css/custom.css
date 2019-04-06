@@ -6,7 +6,7 @@
 @import url(animation.css);
 @import url(quotation.css);
 @import url(team.css);
-/* @import url(media-query.css); */
+@import url(project.css);
 
 * {
   box-sizing: border-box;
