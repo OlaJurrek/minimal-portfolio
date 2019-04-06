@@ -3,7 +3,7 @@
 /* Basic Styles */
 
 @import url(portfolio.css);
-@import url(animation.css);
+@import url(components/crossfade-slider.css);
 @import url(quotation.css);
 @import url(team.css);
 @import url(project.css);
@@ -18,6 +18,7 @@
   --gutter-sm: 60px;
   --gutter-lg: 90px;
   --primary-color: #3a3a3a;
+  --primary-light: #b4b4b4;
 }
 
 a {
@@ -182,62 +183,6 @@ nav {
 .showMenu .line-3 {
   transform: rotate(45deg);
   transform-origin: right bottom;
-}
-
-/* Carousel */
-
-.slide {
-  /*	max-width: 1000px;*/
-  height: 350px;
-  object-fit: cover;
-}
-
-/* Carousel numbers */
-.slide-caption {
-  margin-top: 5px;
-  text-align: right;
-}
-
-.caption {
-  margin-right: 10px;
-  color: rgba(84, 84, 84, 0.7);
-}
-
-.caption.active {
-  font-weight: 700;
-  font-size: 1.1em;
-}
-/* Experiments on cross-fading background images */
-
-.crossfade-box {
-  display: grid;
-  grid-template-columns: 1;
-}
-
-.crossfade-box > * {
-  grid-column: 1 / 1;
-  grid-row: 1 / 1;
-}
-
-.crossfade-box img:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.crossfade-box img:nth-child(3) {
-  animation-delay: 10s;
-}
-
-.crossfade-box > div {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-.crossfade-box > div button {
-  background-color: #fff;
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
 }
 
 /* Latest projects section */
