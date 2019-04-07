@@ -1,3 +1,5 @@
+"use strict";
+
 /* Menu Animation */
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
@@ -43,12 +45,21 @@ function checkSlide(e) {
   });
 }
 
-// Hide label on focus
+// Hide Label If Start Typing
 const form = document.querySelector("form");
 
-// function hideLabelOnFocus(e) {
+form.addEventListener("keyup", hideLabelOnFocus);
 
-// }
+function hideLabelOnFocus(e) {
+  const key = event.key;
+  if (key === "Backspace" || key === "Delete") {
+    if (!e.target.value) {
+      e.target.previousElementSibling.style.visibility = "visible";
+    }
+  } else {
+    e.target.previousElementSibling.style.visibility = "hidden";
+  }
+}
 
 // Portfolio Slideshow
 const current = document.querySelector("#current");
