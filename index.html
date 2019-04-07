@@ -6,8 +6,8 @@
     <meta name="author" content="Aleksandra Jurek" />
     <title>Minimal Portfolio</title>
     <link
+      href="https://fonts.googleapis.com/css?family=Dosis|Lato|Open+Sans:300,400,700"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
     />
     <link
       rel="stylesheet"
@@ -15,206 +15,207 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Dosis|Lato|Open+Sans:400,700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-
   <body>
     <div class="main-container">
       <header>
-        <!-- Social media icons -->
+        <!-- Social Media Icons -->
         <div class="media-icons">
-          <a href="#"><img src="images/facebook-16.png" alt=""/></a>
-          <a href="#"><img src="images/twitter-16.png" alt=""/></a>
-          <a href="#"><img src="images/instagram-6-16.png" alt=""/></a>
+          <a href="#"
+            ><img src="images/facebook-16.png" alt="Facebook Icon"
+          /></a>
+          <a href="#"><img src="images/twitter-16.png" alt="Twitter Icon"/></a>
+          <a href="#"
+            ><img src="images/instagram-6-16.png" alt="Instagram Icon"
+          /></a>
         </div>
-        <!-- Main menu -->
+        <!-- Navigation -->
         <nav>
           <div id="menu" class="hide">
-            <a href="index.html" class="open-page">Home</a>
-            <a href="#about">About</a> <a href="portfolio.html">Portfolio</a>
+            <a href="#home" class="open-page">Home</a>
+            <a href="#about">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="#team">Team</a>
             <a href="#contact">Contact</a>
           </div>
-          <!-- Hamburger menu -->
+          <!-- Hamburger Menu -->
           <a href="#" id="hamburger">
             <span class="line line-1"></span> <span class="line line-2"></span>
             <span class="line line-3"></span>
           </a>
         </nav>
       </header>
-      <!-- Crossfading slideshow with banner in the middle -->
-      <section class="banner">
-        <ul class="crossfade-box">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <div class="banner-heading">
-          <h1>
-            <span>MINIMAL</span>
-            <a href="index.html">DESIGN</a>
-            <span>PORTFOLIO</span>
-          </h1>
-        </div>
-      </section>
-      <!-- Latest projects section -->
-      <section class="projects-gallery">
-        <div class="project-box gallery-intro">
-          <div class="section-header">
-            <div class="initial"><p>N</p></div>
-            <div class="heading">
-              <h2>LATEST PROJECTS</h2>
-              <p></p>
-              <h3>Our Creative Studio</h3>
+      <main>
+        <!-- Crossfading Slideshow with Banner in The Middle -->
+        <section class="banner">
+          <ul class="crossfade-box">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="banner-heading">
+            <h1>
+              <span>MINIMAL</span>
+              <span id="home">DESIGN</span>
+              <span>PORTFOLIO</span>
+            </h1>
+          </div>
+        </section>
+        <!-- Latest Projects Section -->
+        <section class="projects-gallery">
+          <div class="project-box gallery-intro">
+            <div class="section-header">
+              <div class="initial"><p>N</p></div>
+              <div class="heading">
+                <h2>LATEST PROJECTS</h2>
+                <p></p>
+                <h3>Our Creative Studio</h3>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="project-box">
-          <img src="images/two.jpeg" alt="" />
-          <div class="overlay"><button>View →</button></div>
-        </div>
-        <div class="project-box">
-          <img src="images/three.jpeg" alt="" />
-
-          <div class="overlay">
-            <a href="project.html"><button>View → here</button></a>
+          <div class="project-box">
+            <img src="images/two.jpeg" alt="" />
+            <a href="project.html" class="overlay"><button>View →</button></a>
           </div>
-        </div>
-        <div class="project-box">
-          <img src="images/four.jpeg" alt="" />
-          <div class="overlay"><button>View →</button></div>
-        </div>
-        <div class="project-box">
-          <img src="images/six.jpeg" alt="" />
-          <div class="overlay"><button>View →</button></div>
-        </div>
-        <div class="project-box">
-          <img src="images/six.jpeg" alt="" />
-          <div class="overlay"><button>View →</button></div>
-        </div>
-        <div class="project-box">
-          <img src="images/three.jpeg" alt="" />
-          <div class="overlay"><button>View →</button></div>
-        </div>
-      </section>
-      <!-- About -->
-      <section id="about">
-        <div class="description">
-          <div class="section-header">
-            <div class="initial slide-in from-up"><p>A</p></div>
-            <div class="heading slide-in from-down">
-              <h2>WE ARE NOISE</h2>
-              <p></p>
-              <h3>Creative Design</h3>
-            </div>
+          <div class="project-box">
+            <img src="images/three.jpeg" alt="" />
+            <a href="project.html" class="overlay"><button>View →</button></a>
           </div>
-          <p>
-            Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-            cerebro. De carne lumbering animata corpora quaeritis. Summus brains
-            sit​​, morbo vel maleficia? De apocalypsi gorger omero undead
-            survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo
-            evil stalking monstra adventus resi dentevil vultus comedat
-            cerebella viventium. Qui animated corpse, cricket bat max brucks
-            terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat
-            mortuos comedere carnem virus. Zombi tattered for solum oculi eorum
-            defunctis go lum cerebro. Nescio brains an Undead zombies.
-          </p>
-        </div>
-        <!-- Quotations -->
-        <div class="quotation-container">
-          <!-- <div class="quotation-frame"> -->
-          <div class="quotation-slide">
-            <!-- First div is empty for tests -->
-            <div>Jestem pusty</div>
-            <div>
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>1 - Eloquent Javascript</span>
-              </p>
-            </div>
-            <div>
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>2 - Traversy Media</span>
-              </p>
-            </div>
-            <div>
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>3 - Wes Bos</span>
-              </p>
-            </div>
-            <div>
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>4 - Dev Tips</span>
-              </p>
-            </div>
-            <div>
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>5 - Codecademy</span>
-              </p>
-            </div>
-            <div>
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>1 - Eloquent Javascript</span>
-              </p>
-            </div>
-            <div id="firstClone">
-              <p>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis. Summus
-                brains sit​​, morbo vel maleficia?
-                <span>5 - Codecademy</span>
-              </p>
-            </div>
+          <div class="project-box">
+            <img src="images/four.jpeg" alt="" />
+            <a href="project.html" class="overlay"><button>View →</button></a>
           </div>
-        </div>
-        <div class="feature-boxes">
-          <div class="feature-box">
-            <h4>WEBSITES</h4>
-            <p class="secondary">
+          <div class="project-box">
+            <img src="images/six.jpeg" alt="" />
+            <a href="project.html" class="overlay"><button>View →</button></a>
+          </div>
+          <div class="project-box">
+            <img src="images/six.jpeg" alt="" />
+            <a href="project.html" class="overlay"><button>View →</button></a>
+          </div>
+          <div class="project-box">
+            <img src="images/three.jpeg" alt="" />
+            <a href="project.html" class="overlay"><button>View →</button></a>
+          </div>
+        </section>
+        <!-- About Section -->
+        <section id="about">
+          <div class="description">
+            <div class="section-header">
+              <div class="initial slide-in from-up"><p>A</p></div>
+              <div class="heading slide-in from-down">
+                <h2>WE ARE NOISE</h2>
+                <p></p>
+                <h3>Creative Design</h3>
+              </div>
+            </div>
+            <p>
               Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-              cerebro. De carne lumbering animata corpora quaeritis.
+              cerebro. De carne lumbering animata corpora quaeritis. Summus
+              brains sit​​, morbo vel maleficia? De apocalypsi gorger omero
+              undead survivor dictum mauris. Hi mindless mortuis soulless
+              creaturas, imo evil stalking monstra adventus resi dentevil vultus
+              comedat cerebella viventium. Qui animated corpse, cricket bat max
+              brucks terribilem incessu zomby. The voodoo sacerdos flesh eater,
+              suscitat mortuos comedere carnem virus. Zombi tattered for solum
+              oculi eorum defunctis go lum cerebro. Nescio brains an Undead
+              zombies.
             </p>
           </div>
-          <div class="feature-box">
-            <h4>APPLICATIONS</h4>
-            <p class="secondary">
-              Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-              cerebro. De carne lumbering animata corpora quaeritis.
-            </p>
+          <!-- Quotations Slider -->
+          <div class="quotation-container">
+            <div class="quotation-slide">
+              <!-- First div is empty for tests -->
+              <div>Jestem pusty</div>
+              <div>
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>1 - Eloquent Javascript</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>2 - Traversy Media</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>3 - Wes Bos</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>4 - Dev Tips</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>5 - Codecademy</span>
+                </p>
+              </div>
+              <div>
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>1 - Eloquent Javascript</span>
+                </p>
+              </div>
+              <div id="firstClone">
+                <p>
+                  Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                  cerebro. De carne lumbering animata corpora quaeritis. Summus
+                  brains sit​​, morbo vel maleficia?
+                  <span>5 - Codecademy</span>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="feature-box">
-            <h4>MARKETING</h4>
-            <p class="secondary">
-              Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-              cerebro. De carne lumbering animata corpora quaeritis.
-            </p>
+          <!-- Feature Boxes Section -->
+          <div class="feature-boxes">
+            <div class="feature-box">
+              <h4>WEBSITES</h4>
+              <p class="secondary">
+                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                cerebro. De carne lumbering animata corpora quaeritis.
+              </p>
+            </div>
+            <div class="feature-box">
+              <h4>APPLICATIONS</h4>
+              <p class="secondary">
+                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                cerebro. De carne lumbering animata corpora quaeritis.
+              </p>
+            </div>
+            <div class="feature-box">
+              <h4>MARKETING</h4>
+              <p class="secondary">
+                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                cerebro. De carne lumbering animata corpora quaeritis.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="our-team">
+        </section>
+        <!-- Our Team -->
+        <section class="our-team">
           <div class="team-description">
             <div class="section-header">
               <div class="initial slide-in from-up"><p>T</p></div>
@@ -264,7 +265,6 @@
             </div>
             <div class="controls">
               <div id="next"><i class="fas fa-chevron-right"></i></div>
-              <!-- <div></div> -->
               <div id="prev"><i class="fas fa-chevron-left"></i></div>
             </div>
           </div>
@@ -273,35 +273,51 @@
           </div>
           <div class="member-image"><img src="images/team2.jpeg" alt="" /></div>
           <div class="member-image"><img src="images/team3.jpeg" alt="" /></div>
-        </div>
-      </section>
-      <!-- Contact details and form -->
-      <div id="contact" class="bottom-box">
-        <div class="section-header">
-          <div class="initial"><p>C</p></div>
-          <div class="heading">
-            <h2>CONTACT US</h2>
-            <p></p>
-            <h3>Get In Touch</h3>
+        </section>
+
+        <!-- Contact Details And Form -->
+        <section id="contact" class="bottom-box">
+          <div class="section-header">
+            <div class="initial"><p>C</p></div>
+            <div class="heading">
+              <h2>CONTACT US</h2>
+              <p></p>
+              <h3>Get In Touch</h3>
+            </div>
           </div>
-        </div>
-        <div class="contact-details">
-          <p>ul. Zaruskiego 1, 00-486 Warszawa</p>
-          <p>jurek.aleksandra@gmail.com</p>
-          <p>+48 501 305 688</p>
-        </div>
-        <form action="#">
-          <input type="text" placeholder="Enter Name" />
-          <input type="email" placeholder="Enter Email" />
-          <textarea rows="8" placeholder="Enter Your Message"></textarea>
-          <button type="submit">SUBMIT</button>
-        </form>
-      </div>
+          <div class="contact-details">
+            <p>ul. Zaruskiego 1, 00-486 Warszawa</p>
+            <p>jurek.aleksandra@gmail.com</p>
+            <p>+48 501 305 688</p>
+          </div>
+          <form action="#">
+            <div>
+              <label for="name">Enter Name</label>
+              <input type="text" id="name" />
+            </div>
+            <div>
+              <label for="email">Enter Email</label>
+              <input type="email" id="email" />
+            </div>
+            <div>
+              <label for="msg">Enter Your Message</label>
+              <textarea rows="8" id="msg"></textarea>
+            </div>
+
+            <button type="submit">SUBMIT</button>
+          </form>
+        </section>
+      </main>
+      <!-- Footer -->
       <footer>
         <div class="media-icons">
-          <a href="#"><img src="images/facebook-16.png" alt=""/></a>
-          <a href="#"><img src="images/twitter-16.png" alt=""/></a>
-          <a href="#"><img src="images/instagram-6-16.png" alt=""/></a>
+          <a href="#"
+            ><img src="images/facebook-16.png" alt="Facebook Icon"
+          /></a>
+          <a href="#"><img src="images/twitter-16.png" alt="Twitter Icon"/></a>
+          <a href="#"
+            ><img src="images/instagram-6-16.png" alt="Instagram Icon"
+          /></a>
         </div>
         <p class="secondary">&copy; 2018 - 2019 Aleksandra Jurek</p>
       </footer>

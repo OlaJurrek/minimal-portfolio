@@ -1,4 +1,4 @@
-/* Menu animation */
+/* Menu Animation */
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 
@@ -12,17 +12,17 @@ hamburger.addEventListener("click", () => {
   }
 });
 
-/* On-scroll animations */
+/* On-scroll Animations */
 function debounce(func, wait = 20, immediate = true) {
-  var timeout;
+  let timeout;
   return function() {
-    var context = this,
+    const context = this,
       args = arguments;
-    var later = function() {
+    const later = function() {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
-    var callNow = immediate && !timeout;
+    const callNow = immediate && !timeout;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
@@ -43,7 +43,14 @@ function checkSlide(e) {
   });
 }
 
-// Portfolio slideshow
+// Hide label on focus
+const form = document.querySelector("form");
+
+// function hideLabelOnFocus(e) {
+
+// }
+
+// Portfolio Slideshow
 const current = document.querySelector("#current");
 const thumbnails = document.querySelectorAll(".thumbnails div img");
 
