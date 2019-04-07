@@ -1,0 +1,40 @@
+@import url(reset.css);
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Typography */
+h1,
+h2 {
+  font: normal 36px/1.2em Dosis, sans-serif;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font: normal 18px/1.2em Lato, sans-serif;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font: normal 24px/0.8em Dosis, sans-serif;
+  color: var(--primary-dark);
+}
+
+p {
+  font: 16px/24px Lato, sans-serif;
+  color: #7f7f7f;
+}
+
+/* Secondary Text */
+.secondary-text {
+  font-size: 14px;
+}

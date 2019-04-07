@@ -1,0 +1,13 @@
+/* About Section */
+#about {
+  padding-top: 80px;
+}
+
+.description {
+  max-width: 530px;
+  margin: 0 auto 65px;
+}
+
+.description .section-header {
+  margin-bottom: 40px;
+}

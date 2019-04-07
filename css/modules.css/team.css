@@ -1,3 +1,4 @@
+/* Main Layout */
 .our-team {
   display: grid;
   grid-template-areas:
@@ -16,6 +17,7 @@
   margin-top: 30px;
 }
 
+/* Contact Details */
 .member-contact {
   grid-area: contact;
   display: grid;
@@ -30,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   padding: 60px 15px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-dark);
   visibility: hidden;
 }
 
@@ -62,6 +64,7 @@
   margin-top: 15px;
 }
 
+/* Slider */
 .controls {
   grid-column: 2 / 3;
   background-color: #000;

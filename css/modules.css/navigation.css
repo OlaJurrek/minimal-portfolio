@@ -1,0 +1,83 @@
+/* Main Menu */
+nav {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+  align-items: center;
+  overflow: hidden;
+}
+
+#menu {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: all 0.7s;
+}
+
+#menu.hide {
+  transform: translateX(100%);
+}
+
+#menu.show {
+  transform: translateX(0);
+}
+
+#menu a {
+  padding: 0 20px;
+  margin: 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #545454;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: opacity 0.4s;
+}
+
+#menu a:last-child {
+  margin-right: 4em;
+}
+
+#menu a:hover {
+  opacity: 0.6;
+  border-bottom: 1px grey solid;
+  color: inherit;
+}
+
+.open-page {
+  border-bottom: 1px grey solid;
+}
+
+/* Hamburger Menu */
+#hamburger {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-self: end;
+  width: 35px;
+  height: 25px;
+  padding: 2px 15px 2px 5px;
+  background-color: #fff;
+  z-index: 23;
+}
+
+.line {
+  display: block;
+  background: grey;
+  width: 25px;
+  height: 4px;
+  border-radius: 4px;
+  transition: transform 0.4s;
+  margin-bottom: 4.5px;
+}
+
+.showMenu .line-1 {
+  transform: rotate(-45deg);
+  transform-origin: right top;
+}
+
+.showMenu .line-2 {
+  visibility: hidden;
+}
+
+.showMenu .line-3 {
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}

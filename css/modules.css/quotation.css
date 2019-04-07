@@ -1,6 +1,7 @@
+/* Quotation Slideshow */
 .quotation-container {
   min-height: 400px;
-  background: url(../images/quot-back.jpeg);
+  background: url(../../images/quot-back.jpeg);
   background-size: cover;
   display: flex;
   align-items: center;
@@ -23,7 +24,7 @@
 }
 
 .quotation-slide > div > p {
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-size: 20px;
   line-height: 36px;
 }
@@ -55,10 +56,10 @@
 }
 
 .quotation-slide span {
+  display: block;
+  margin-top: 16px;
   text-transform: uppercase;
   font-weight: 700;
-  display: block;
   text-align: center;
-  margin-top: 16px;
   color: rgb(26, 24, 24);
 }

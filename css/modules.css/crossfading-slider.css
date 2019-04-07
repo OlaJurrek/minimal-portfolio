@@ -1,9 +1,4 @@
-/* Crossfading slideshow with banner in the middle */
-
-.banner {
-  position: relative;
-}
-
+/* Crossfading Slideshow With Heading */
 .crossfade-box {
   width: 100%;
   height: 100%;
@@ -86,7 +81,7 @@ h1 span:nth-of-type(2)::before {
   z-index: -1;
 }
 
-/* Crossfading animation */
+/* Crossfading Animation */
 @keyframes crossfade {
   0% {
     opacity: 0;

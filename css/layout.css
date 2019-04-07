@@ -1,0 +1,47 @@
+/* Main Layout */
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--gutter-sm) 15px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--gutter-sm);
+}
+
+/* Top Banner (or Slideshow at Home Page) */
+.banner {
+  position: relative;
+  height: 400px;
+  margin-bottom: var(--gutter-lg);
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*  Bottom Box */
+.bottom-box {
+  padding: 40px 60px;
+  background-image: url(../images/gray_sand.png);
+}
+
+.bottom-box p,
+.bottom-box h2,
+.bottom-box h3 {
+  color: #e3e3e3;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gutter-sm) 0 30px;
+}

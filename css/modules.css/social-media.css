@@ -1,0 +1,8 @@
+/* Social Media Icons */
+.media-icons a {
+  margin-right: 20px;
+}
+
+.media-icons a:hover {
+  opacity: 0.7;
+}

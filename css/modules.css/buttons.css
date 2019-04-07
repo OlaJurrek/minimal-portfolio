@@ -1,0 +1,19 @@
+/* Buttons */
+.btn {
+  display: block;
+  background-color: #fff;
+  border: 2px solid var(--primary-dark);
+  padding: 19px 0;
+  width: 100%;
+  max-width: 280px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font: 400 1rem/1.1875rem Lato, sans-serif;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+}

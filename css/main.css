@@ -1,9 +1,9 @@
-@import url(reset.css);
-@import url(components/section-heading.css);
-@import url(team.css);
-@import url(custom.css);
-@import url(portfolio.css);
-@import url(components/crossfade-slider.css);
-@import url(quotation.css);
+@import url(variables.css);
+@import url(base.css);
+@import url(layout.css);
+@import url(module.css);
 
-@import url(project.css);
+/* Do przejrzenia jutro */
+@import url(portfolio.css);
+
+@import url(states.css);

@@ -1,14 +1,3 @@
-.banner {
-  height: 400px;
-  margin-bottom: var(--gutter-lg);
-}
-
-.banner img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .portfolio-intro {
   display: flex;
   margin-bottom: var(--gutter-lg);
