@@ -76,7 +76,7 @@
 .banner-heading a::before {
   content: "";
   top: -60px;
-  left: 5px;
+  left: 3px;
   position: absolute;
   height: 160px;
   width: 160px;

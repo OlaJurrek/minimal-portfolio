@@ -1,16 +1,18 @@
-//Quotation slideshow
+// Initialize Smooth Scroll
+const scroll = new SmoothScroll('a[href*="#"]');
 
+//Quotation slideshow
 const quotationSlide = document.querySelector(".quotation-slide");
 const quotationDivs = document.querySelectorAll(".quotation-slide div");
 
 let counter = 1;
-const size = quotationDivs[0].clientWidth;
 
 // quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
 
 setInterval(quotationSlider, 2000);
 
 function quotationSlider() {
+  const size = quotationDivs[0].clientWidth;
   if (counter <= quotationDivs.length) {
     quotationSlide.style.transition = "transform .7s ease-in-out";
     quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
@@ -26,6 +28,7 @@ function quotationSlider() {
 }
 
 quotationSlide.addEventListener("transitionend", () => {
+  const size = quotationDivs[0].clientWidth;
   if (quotationDivs[counter].id === "firstClone") {
     // quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
     quotationSlide.style.transition = "none";
@@ -43,7 +46,6 @@ quotationSlide.addEventListener("transitionend", () => {
 // });
 
 // Team members slideshow
-
 const membersDetails = document.querySelectorAll(".member-details");
 const membersImages = document.querySelectorAll(".member-image");
 

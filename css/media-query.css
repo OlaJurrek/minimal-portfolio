@@ -1,0 +1,137 @@
+@media (max-width: 1024px) {
+  .feature-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .feature-box {
+    max-width: 350px;
+    margin: 15px 0;
+  }
+}
+
+/* Our Team */
+@media (max-width: 800px) {
+  .our-team {
+    grid-template-areas:
+      "description"
+      "image"
+      "contact";
+    justify-items: center;
+  }
+  .member-contact {
+    grid-template-columns: minmax(auto, 580px) 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Menu  */
+  :root {
+    --gutter-sm: 25px;
+  }
+
+  #menu {
+    transition: none;
+  }
+
+  #menu.hide {
+    display: none;
+  }
+
+  #menu.show {
+    position: fixed;
+    z-index: 16;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  #menu.show a {
+    display: inline-block;
+    margin: 35px auto 0;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    width: 70%;
+  }
+
+  #menu.show:first-child {
+    padding-top: 15vh;
+  }
+
+  #menu.show a:last-child {
+    margin: 35px auto 0;
+  }
+
+  #hamburger.showMenu {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+  }
+
+  /* Heading in Crossfading Slideshow */
+  .banner-heading h1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  /*	Latest Projects Header */
+  .project-box:first-child {
+    grid-column: 1 / 2;
+  }
+
+  /* Contact Details and Form */
+  #contact {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    padding: 20px 30px;
+  }
+
+  .section-header {
+    grid-row: 1 / 2;
+  }
+
+  .contact-details {
+    grid-row: 2 / 3;
+  }
+
+  form {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  /* Portfolio Page */
+  .portfolio-intro {
+    flex-direction: column;
+  }
+
+  .portfolio-intro div {
+    margin-bottom: var(--gutter-sm);
+  }
+
+  /* Portfolio Gallery */
+  #current {
+    display: none;
+  }
+
+  .thumbnails {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Button */
+  .portfolio-btn {
+    margin-top: var(--gutter-sm);
+  }
+}
