@@ -45,22 +45,6 @@ function checkSlide(e) {
   });
 }
 
-// Hide Label If Start Typing
-const form = document.querySelector("form");
-
-form.addEventListener("keyup", hideLabelOnFocus);
-
-function hideLabelOnFocus(e) {
-  const key = event.key;
-  if (key === "Backspace" || key === "Delete") {
-    if (!e.target.value) {
-      e.target.previousElementSibling.style.visibility = "visible";
-    }
-  } else {
-    e.target.previousElementSibling.style.visibility = "hidden";
-  }
-}
-
 // Portfolio Slideshow
 const current = document.querySelector("#current");
 const thumbnails = document.querySelectorAll(".thumbnails div img");

@@ -1,0 +1,14 @@
+.project-details {
+  max-width: 280px;
+  margin: auto;
+}
+
+.project-details > * {
+  font-size: 1.025rem;
+  line-height: 2;
+  color: var(--primary-dark);
+}
+
+.project-details span {
+  font-weight: 700;
+}

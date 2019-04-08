@@ -2,8 +2,4 @@
 @import url(base.css);
 @import url(layout.css);
 @import url(module.css);
-
-/* Do przejrzenia jutro */
-@import url(portfolio.css);
-
 @import url(states.css);

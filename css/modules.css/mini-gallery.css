@@ -1,0 +1,24 @@
+/* Mini Gallery  */
+.portfolio-instagram {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin: var(--gutter-sm) 10px 30px;
+}
+
+.portfolio-instagram div {
+  overflow: hidden;
+  transition: transform 0.7s ease-in-out;
+}
+
+.portfolio-instagram img {
+  min-height: 100%;
+}
+
+.portfolio-instagram > div > img:hover {
+  transform: scale(1.2);
+}
+
+.portfolio-instagram > img {
+  position: absolute;
+}

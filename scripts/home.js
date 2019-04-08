@@ -87,3 +87,19 @@ function hideMember() {
   membersImages[currentMember].classList.remove("show-member");
   membersDetails[currentMember].classList.remove("show-member");
 }
+
+// Hide Label If Start Typing
+const form = document.querySelector("form");
+
+form.addEventListener("keyup", hideLabelOnFocus);
+
+function hideLabelOnFocus(e) {
+  const key = event.key;
+  if (key === "Backspace" || key === "Delete") {
+    if (!e.target.value) {
+      e.target.previousElementSibling.style.visibility = "visible";
+    }
+  } else {
+    e.target.previousElementSibling.style.visibility = "hidden";
+  }
+}

@@ -1,11 +1,23 @@
+/* General */
 @import url(modules.css/buttons.css);
 @import url(modules.css/social-media.css);
 @import url(modules.css/navigation.css);
-@import url(modules.css/crossfading-slider.css);
 @import url(modules.css/section-header.css);
-@import url(modules.css/latest-projects.css);
-@import url(modules.css/about.css);
-@import url(modules.css/quotation.css);
+@import url(modules.css/sect-narrow-wide.css);
+@import url(modules.css/mini-gallery.css);
+
+/* Used Only in Home Page */
+@import url(modules.css/crossfading-slider.css);
+@import url(modules.css/big-gallery.css);
+@import url(modules.css/narrow-article.css);
+@import url(modules.css/infinite-slider.css);
 @import url(modules.css/feature-boxes.css);
 @import url(modules.css/team.css);
 @import url(modules.css/contact.css);
+
+/* Used Only in Portfolio Page */
+@import url(modules.css/small-gallery.css);
+
+/* Used Only in Single Project Page */
+@import url(modules.css/project-details.css);
+@import url(modules.css/flex-gallery.css);

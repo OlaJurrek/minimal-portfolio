@@ -1,4 +1,4 @@
-/* Buttons */
+/* General Button Style */
 .btn {
   display: block;
   background-color: #fff;
@@ -16,4 +16,9 @@
 .btn:hover {
   background-color: var(--primary-dark);
   color: #fff;
+}
+
+/*  Contact Button */
+.portfolio-btn {
+  margin: var(--gutter-sm) auto;
 }
