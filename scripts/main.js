@@ -25,7 +25,6 @@ window.addEventListener("scroll", showMoveUp);
 function showMoveUp() {
   if (window.scrollY > header.offsetHeight) {
     document.body.classList.add("move-up");
-    console.log(header.offsetHeight);
   } else {
     document.body.classList.remove("move-up");
   }

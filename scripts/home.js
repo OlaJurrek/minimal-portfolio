@@ -1,49 +1,4 @@
-// Initialize Smooth Scroll
-const scroll = new SmoothScroll('a[href*="#"]');
-
-//Quotation slideshow
-const quotationSlide = document.querySelector(".quotation-slide");
-const quotationDivs = document.querySelectorAll(".quotation-slide div");
-
-let counter = 1;
-
-// quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
-
-setInterval(quotationSlider, 2000);
-
-function quotationSlider() {
-  const size = quotationDivs[0].clientWidth;
-  if (counter <= quotationDivs.length) {
-    quotationSlide.style.transition = "transform .7s ease-in-out";
-    quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
-    counter++;
-  }
-
-  // else {
-  //   quotationSlide.style.transition = "none";
-  //   counter = 0;
-  //   quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
-  //   counter++;
-  // }
-}
-
-quotationSlide.addEventListener("transitionend", () => {
-  const size = quotationDivs[0].clientWidth;
-  if (quotationDivs[counter].id === "firstClone") {
-    // quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
-    quotationSlide.style.transition = "none";
-    counter = 1;
-    quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
-  }
-});
-
-// quotationSlider.addEventListener("transitionend", () => {
-//   if (carouselImages[counter].id === "lastClone") {
-//     carouselSlide.style.transition = "none";
-//     counter = carouselImages.length - 2;
-//     carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-//   }
-// });
+"use strict";
 
 // Team members slideshow
 const membersDetails = document.querySelectorAll(".member-details");
@@ -103,3 +58,8 @@ function hideLabelOnFocus(e) {
     e.target.previousElementSibling.style.visibility = "hidden";
   }
 }
+
+//Quotation slideshow
+const quotationSlide = document.querySelector(".quotation-slide");
+const quotationDivs = quotationSlide.children;
+console.log(quotationDivs);
