@@ -1,6 +1,6 @@
 "use strict";
 
-// Team members slideshow
+// Team Members Slideshow
 const membersDetails = document.querySelectorAll(".member-details");
 const membersImages = document.querySelectorAll(".member-image");
 
@@ -59,7 +59,25 @@ function hideLabelOnFocus(e) {
   }
 }
 
-//Quotation slideshow
+// Quotation Slideshow
 const quotationSlide = document.querySelector(".quotation-slide");
 const quotationDivs = quotationSlide.children;
-console.log(quotationDivs);
+
+let counter = 0;
+
+setInterval(quotationSlider, 2000);
+
+function quotationSlider() {
+  const size = quotationDivs[0].clientWidth;
+  quotationSlide.style.transition = "transform .8s ease-in-out";
+  counter++;
+  quotationSlide.style.transform = "translateX(" + -size * counter + "px)";
+}
+
+quotationSlide.addEventListener("transitionend", () => {
+  if (quotationDivs[counter].id === "firstClone") {
+    quotationSlide.style.transition = "none";
+    counter = 0;
+    quotationSlide.style.transform = "translateX(0)";
+  }
+});
