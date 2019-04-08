@@ -1,5 +1,8 @@
 "use strict";
 
+// Initialize Smooth Scroll
+const scroll = new SmoothScroll('a[href*="#"]');
+
 /* Menu Animation */
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
@@ -13,6 +16,20 @@ hamburger.addEventListener("click", () => {
     hamburger.className = hamburger.className.replace("showMenu", "");
   }
 });
+
+/* Show Move Up Link If Menu Above View */
+
+const header = document.querySelector("header");
+window.addEventListener("scroll", showMoveUp);
+
+function showMoveUp() {
+  if (window.scrollY > header.offsetHeight) {
+    document.body.classList.add("move-up");
+    console.log(header.offsetHeight);
+  } else {
+    document.body.classList.remove("move-up");
+  }
+}
 
 /* On-scroll Animations */
 function debounce(func, wait = 20, immediate = true) {

@@ -30,15 +30,15 @@
 }
 
 .feature-box:first-child {
-  background: url(../images/website.png) no-repeat 50% 5%;
+  background: url(../../images/website.png) no-repeat 50% 5%;
 }
 
 .feature-box:nth-child(2) {
-  background: url(../images/picture-128.png) no-repeat 50% 5%;
+  background: url(../../images/picture-128.png) no-repeat 50% 5%;
 }
 
 .feature-box:last-child {
-  background: url(../images/line-128.png) no-repeat 50% 5%;
+  background: url(../../images/line-128.png) no-repeat 50% 5%;
 }
 
 .feature-box p {

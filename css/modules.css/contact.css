@@ -18,15 +18,15 @@
 }
 
 .contact-details p:first-child {
-  background: url(../images/map-marker.png) no-repeat;
+  background: url(../../images/map-marker.png) no-repeat;
 }
 
 .contact-details p:nth-child(2) {
-  background: url(../images/envelope.png) no-repeat;
+  background: url(../../images/envelope.png) no-repeat;
 }
 
 .contact-details p:last-child {
-  background: url(../images/phone.png) no-repeat;
+  background: url(../../images/phone.png) no-repeat;
 }
 
 /* Contact Form */
