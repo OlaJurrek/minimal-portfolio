@@ -18,7 +18,6 @@ hamburger.addEventListener("click", () => {
 });
 
 /* Show Move Up Link If Menu Above View */
-
 const header = document.querySelector("header");
 window.addEventListener("scroll", showMoveUp);
 

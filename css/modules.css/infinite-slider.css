@@ -1,8 +1,9 @@
 /* Quotation Slideshow */
 .quotation-container {
   min-height: 400px;
-  background: url(../../images/quot-back.jpeg);
+  background: url(../../images/slider-bg.jpg);
   background-size: cover;
+  background-position: bottom right;
   display: flex;
   align-items: center;
   overflow: hidden;
