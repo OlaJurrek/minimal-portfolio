@@ -98,6 +98,7 @@
 @media (max-width: 700px) {
   :root {
     --gutter-sm: 25px;
+    --gutter-lg: 60px;
   }
 
   h3 {
@@ -142,6 +143,10 @@
   form {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+  }
+
+  #contact button {
+    width: 100%;
   }
 
   /* Portfolio Page - Gallery */
