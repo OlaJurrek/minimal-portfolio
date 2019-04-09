@@ -17,6 +17,14 @@ hamburger.addEventListener("click", () => {
   }
 });
 
+// Close Menu if Link is Clicked
+menu.addEventListener("click", e => {
+  if (e.target.tagName === "A") {
+    menu.className = menu.className.replace("show", "hide");
+    hamburger.className = hamburger.className.replace("showMenu", "");
+  }
+});
+
 /* Show Move Up Link If Menu Above View */
 const header = document.querySelector("header");
 window.addEventListener("scroll", showMoveUp);

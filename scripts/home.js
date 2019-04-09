@@ -65,7 +65,7 @@ const quotationDivs = quotationSlide.children;
 
 let counter = 0;
 
-setInterval(quotationSlider, 2000);
+setInterval(quotationSlider, 2500);
 
 function quotationSlider() {
   const size = quotationDivs[0].clientWidth;

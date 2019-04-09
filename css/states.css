@@ -36,7 +36,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   /* Menu  */
   #menu {
     transition: none;
@@ -100,6 +100,10 @@
     --gutter-sm: 25px;
   }
 
+  h3 {
+    font-size: 16px;
+  }
+
   /* Heading in Crossfading Slideshow */
   h1 {
     height: 100%;
@@ -107,6 +111,11 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+  }
+
+  /* Bottom Box  */
+  .bottom-box {
+    padding: 40px;
   }
 
   /*	Latest Projects Header */
