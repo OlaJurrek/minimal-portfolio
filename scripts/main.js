@@ -11,13 +11,15 @@ hamburger.addEventListener("click", () => {
   if (menu.className == "hide") {
     menu.className = menu.className.replace("hide", "show");
     hamburger.className += "showMenu";
+    document.body.className.replace("", "block-scroll");
   } else {
     menu.className = menu.className.replace("show", "hide");
     hamburger.className = hamburger.className.replace("showMenu", "");
+    document.body.className.replace("block-scroll", "");
   }
 });
 
-// Close Menu if Link is Clicked
+// Close Menu if Link Is Clicked
 menu.addEventListener("click", e => {
   if (e.target.tagName === "A") {
     menu.className = menu.className.replace("show", "hide");
@@ -25,7 +27,7 @@ menu.addEventListener("click", e => {
   }
 });
 
-/* Show Move Up Link If Menu Above View */
+/* Show Move Up Arrow If Menu Above View */
 const header = document.querySelector("header");
 window.addEventListener("scroll", showMoveUp);
 
