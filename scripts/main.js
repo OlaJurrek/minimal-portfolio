@@ -11,19 +11,30 @@ hamburger.addEventListener("click", () => {
   if (menu.className == "hide") {
     menu.className = menu.className.replace("hide", "show");
     hamburger.className += "showMenu";
-    document.body.className.replace("", "block-scroll");
+    blockScroll();
   } else {
     menu.className = menu.className.replace("show", "hide");
     hamburger.className = hamburger.className.replace("showMenu", "");
-    document.body.className.replace("block-scroll", "");
+    blockScroll();
   }
 });
+
+function blockScroll() {
+  if (document.documentElement.clientWidth < 850) {
+    if (!document.body.classList.contains("block-scroll")) {
+      document.body.classList.add("block-scroll");
+    } else {
+      document.body.classList.remove("block-scroll");
+    }
+  }
+}
 
 // Close Menu if Link Is Clicked
 menu.addEventListener("click", e => {
   if (e.target.tagName === "A") {
     menu.className = menu.className.replace("show", "hide");
     hamburger.className = hamburger.className.replace("showMenu", "");
+    blockScroll();
   }
 });
 

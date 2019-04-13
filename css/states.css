@@ -1,6 +1,6 @@
 /* Disable scrolling in the backround if mobile menu is open */
 .block-scroll {
-  overflow: hidden;
+  position: fixed;
 }
 
 /* On-Scroll Animation Styles */
