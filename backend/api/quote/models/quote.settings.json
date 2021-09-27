@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotes",
+  "info": {
+    "name": "Quote"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blockquote": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 15
+    },
+    "cite": {
+      "type": "string",
+      "minLength": 3
+    }
+  }
+}

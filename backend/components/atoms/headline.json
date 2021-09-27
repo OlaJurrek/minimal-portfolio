@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_atoms_headlines",
+  "info": {
+    "name": "Headline",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "letter": {
+      "type": "string",
+      "required": true,
+      "maxLength": 1,
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 15,
+      "minLength": 5
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true,
+      "minLength": 7,
+      "maxLength": 22
+    }
+  }
+}

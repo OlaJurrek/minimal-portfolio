@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "type": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "main": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "carousel": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Introduction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "molecules.section"
+    },
+    "date": {
+      "type": "string"
+    }
+  }
+}

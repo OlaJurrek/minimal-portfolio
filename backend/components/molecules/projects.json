@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_molecules_projects",
+  "info": {
+    "name": "Projects",
+    "icon": "border-all",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "atoms.headline",
+      "required": true
+    },
+    "projectsList": {
+      "collection": "project"
+    }
+  }
+}

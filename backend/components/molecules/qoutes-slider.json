@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_molecules_qoutes_sliders",
+  "info": {
+    "name": "QoutesSlider",
+    "icon": "font"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "quotes": {
+      "collection": "quote"
+    }
+  }
+}

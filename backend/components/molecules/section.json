@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_molecules_sections",
+  "info": {
+    "name": "section",
+    "icon": "grip-vertical",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "atoms.headline",
+      "required": true
+    },
+    "paragraph": {
+      "type": "component",
+      "repeatable": false,
+      "component": "atoms.paragraph",
+      "required": true
+    }
+  }
+}

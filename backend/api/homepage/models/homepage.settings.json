@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "homepage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "crossfade": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "molecules.section",
+      "required": true
+    },
+    "qoutesSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "molecules.qoutes-slider"
+    },
+    "projects": {
+      "type": "component",
+      "repeatable": false,
+      "component": "molecules.projects"
+    }
+  }
+}
