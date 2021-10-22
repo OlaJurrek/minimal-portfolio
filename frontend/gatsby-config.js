@@ -16,5 +16,6 @@ module.exports = {
         queryLimit: 1000, // Defaults to 100
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };
