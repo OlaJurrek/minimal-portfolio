@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "people",
   "info": {
-    "name": "People",
+    "name": "people",
     "description": ""
   },
   "options": {

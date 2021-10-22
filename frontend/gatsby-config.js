@@ -6,5 +6,15 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        collectionTypes: [`quote`],
+        // singleTypes: [`homepage`],
+        queryLimit: 1000, // Defaults to 100
+      },
+    },
+  ],
+};
