@@ -8,4 +8,8 @@ export const theme = {
     dosis: "'Dosis', sans-serif",
     lato: "'Lato', sans-serif",
   },
+  gutters: {
+    sm: '60px', // gutter sm
+    lg: '90px', // gutter lg
+  },
 };

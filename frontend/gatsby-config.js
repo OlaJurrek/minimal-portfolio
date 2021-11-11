@@ -11,11 +11,19 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
-        collectionTypes: [`quote`],
+        collectionTypes: [`quote`, `social`],
         // singleTypes: [`homepage`],
         queryLimit: 1000, // Defaults to 100
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
   ],
 };
