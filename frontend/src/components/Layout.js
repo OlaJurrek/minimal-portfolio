@@ -14,8 +14,8 @@ const MainContainer = styled.div`
 export default function Layout({ children }) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <MainContainer>
           <Header />
           {children}

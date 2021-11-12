@@ -137,7 +137,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-    text-decoration: none;
+        text-decoration: none;
     }
 
     img {
@@ -169,6 +169,15 @@ const GlobalStyle = createGlobalStyle`
     /* Secondary Text */
     .secondary-text {
     font-size: 1.4rem;
+    }
+
+    .visually-hidden {
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
     }
 `;
 

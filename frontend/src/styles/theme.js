@@ -1,8 +1,10 @@
 export const theme = {
   colors: {
-    gray_200: 'hsl(0, 0%, 71%)', // primary light
-    gray_400: 'hsl(0, 0%, 50%)',
-    dark_600: 'hsl(0, 0%, 23%)', // primary dark
+    gray_600: 'hsl(0, 0%, 71%)', // primary light
+    gray_500: 'hsl(0, 0%, 50%)',
+    gray_450: 'hsl(0, 0%, 45%)',
+    dark_200: 'hsl(0, 0%, 23%)', // primary dark
+    blue_600: 'hsl(205deg 39% 45%)', // focus outline
   },
   fonts: {
     dosis: "'Dosis', sans-serif",

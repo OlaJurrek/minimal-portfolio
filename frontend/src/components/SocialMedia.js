@@ -11,11 +11,17 @@ const StyledSocialMedia = styled.ul`
 
 const SocialMediaIcon = styled.a`
   display: inline-block;
-  margin-right: 20px;
-  color: ${({ theme }) => theme.colors.gray_400};
+  margin-right: 24px;
+  color: ${({ theme }) => theme.colors.gray_450};
+
+  &:focus {
+    // może jakiś component link zrobić, który będzie miał te style i tylko go rozszerzać?
+    outline: 2px solid ${({ theme }) => theme.colors.blue_600};
+    outline-offset: 3px;
+  }
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.75;
   }
 `;
 
@@ -24,6 +30,7 @@ export default function SocialMedia() {
     query {
       allStrapiSocial {
         nodes {
+          alternativeText
           isActive
           link
           name
@@ -32,32 +39,29 @@ export default function SocialMedia() {
     }
   `);
 
-  const socials = data.allStrapiSocial.nodes.map(function (item) {
-    switch (item.name) {
-      case 'facebook':
+  const socials = data.allStrapiSocial.nodes
+    .filter(item => item.isActive)
+    .map(item => {
+      if (item.link.includes('facebook')) {
         item = { ...item, icon: <FacebookIcon /> };
-        break;
-      case 'twitter':
+      } else if (item.link.includes('twitter')) {
         item = { ...item, icon: <TwitterIcon /> };
-        break;
-      case 'instagram':
+      } else if (item.link.includes('instagram')) {
         item = { ...item, icon: <InstagramIcon /> };
-        break;
-    }
-    return item;
-  });
+      }
+      return item;
+    });
 
   return (
     <StyledSocialMedia>
-      {socials.map(item => {
-        if (item.isActive) {
-          return (
-            <li key={item.name}>
-              <SocialMediaIcon href={item.link}>{item.icon}</SocialMediaIcon>
-            </li>
-          );
-        }
-      })}
+      {socials.map(item => (
+        <li key={item.name}>
+          <SocialMediaIcon href={item.link}>
+            {item.icon}
+            <span className="visually-hidden">{item.alternativeText}</span>
+          </SocialMediaIcon>
+        </li>
+      ))}
     </StyledSocialMedia>
   );
 }
