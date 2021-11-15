@@ -1,152 +1,81 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-    /* Meyer's reset */
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-    display: block;
-    }
-    body {
-    line-height: 1;
-    }
-    ol,
-    ul {
-    list-style: none;
-    }
-    blockquote,
-    q {
-    quotes: none;
-    }
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-    content: "";
-    content: none;
-    }
-    table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    }
 
-    /* Unification */
+    /* Use a more-intuitive box-sizing model */
     *, *::before, *::after {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
 
+    /* Remove default margin for common elements */
+    body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol, dl, dt, dd {
+        margin: 0;
+    }
+
+    /* Set 1rem to 10px to let use rems for typography styles easier */
     html {
         font-size: 62.5%;
+    }
+
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+
+    /* Allow percentage-based heights in the application */
+    html, body {
+        height: 100%
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+    }
+
+    /* Remove list styles on ul, ol elements */
+    ul, ol {
+        padding: 0;
+        list-style: none;
     }
 
     a {
         text-decoration: none;
     }
 
-    img {
-    max-width: 100%;
+    img, picture {
+        display: block;
+        max-width: 100%;
     }
 
-    /* Typography */
-    h1,
-    h2 {
+    /* Inherit fonts for inputs and buttons */
+    input, button, textarea, select {
+        font: inherit;
+    }
+
+    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+    @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+            scroll-behavior: auto;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    /* Create a root stacking context */
+    #__gatsby {
+        isolation: isolate;
+    }
+
+    /* Basic typography */
+    h1, h2 {
     font: normal 3.6rem/1.2 'Dosis', sans-serif;
     letter-spacing: 0.1rem;
     }
@@ -166,7 +95,8 @@ const GlobalStyle = createGlobalStyle`
     color: #7f7f7f;
     }
 
-    /* Secondary Text */
+
+    /* Common classes */
     .secondary-text {
     font-size: 1.4rem;
     }
